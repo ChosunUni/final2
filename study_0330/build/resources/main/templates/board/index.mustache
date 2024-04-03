@@ -1,0 +1,21 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#boardList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="board/{{id}}">{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/boardList}}
+    </tbody>
+</table>
+<a href="/board/write">글작성</a>
+{{>layouts/footer}}
